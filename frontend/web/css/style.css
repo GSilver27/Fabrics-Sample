@@ -2,3 +2,12 @@ html {
     /*font-size: 10px;*/
 }
 
+footer {
+    margin-top: auto;
+}
+
+header ul li{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between !important;
+}

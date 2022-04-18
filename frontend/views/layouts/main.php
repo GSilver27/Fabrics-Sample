@@ -26,43 +26,51 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header>
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Catalog', 'url' => ['/site/catalog']],
-        ['label' => 'Services', 'url' => ['/site/services']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Delivery', 'url' => ['/site/delivery']],
-        ['label' => 'Reviews', 'url' => ['/site/reviews']],
-        ['label' => 'Education', 'url' => ['/site/education']],
-        ['label' => 'Contacts', 'url' => ['/site/contacts']],
-        ['label' => 'Wholesale', 'url' => ['/site/wholesale']],
-    ];
-//    if (Yii::$app->user->isGuest) {
-//        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-//        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-//    } else {
-//        $menuItems[] = '<li>'
-//            . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-//            . Html::submitButton(
-//                'Logout (' . Yii::$app->user->identity->username . ')',
-//                ['class' => 'btn btn-link logout']
-//            )
-//            . Html::endForm()
-//            . '</li>';
-//    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav ml-auto'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    <a href="../site/catalog.php">Catalog</a>
+    <a href="">Services</a>
+    <a href="">About</a>
+    <a href="">Delivery</a>
+    <a href="">Reviews</a>
+    <a href="">Education</a>
+    <a href="">Contacts</a>
+    <a href="">Wholesale</a>
+<!--    --><?php
+//    NavBar::begin([
+//////        'brandLabel' => Yii::$app->name,
+////        'brandUrl' => Yii::$app->homeUrl,
+////        'options' => [
+////            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+////        ],
+////    ]);
+//    $menuItems = [
+//        ['label' => 'Catalog', 'url' => ['/site/catalog']],
+//        ['label' => 'Services', 'url' => ['/site/services']],
+//        ['label' => 'About', 'url' => ['/site/about']],
+//        ['label' => 'Delivery', 'url' => ['/site/delivery']],
+//        ['label' => 'Reviews', 'url' => ['/site/reviews']],
+//        ['label' => 'Education', 'url' => ['/site/education']],
+//        ['label' => 'Contacts', 'url' => ['/site/contacts']],
+//        ['label' => 'Wholesale', 'url' => ['/site/wholesale']],
+//    ];
+////    if (Yii::$app->user->isGuest) {
+////        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+////        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+////    } else {
+////        $menuItems[] = '<li>'
+////            . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
+////            . Html::submitButton(
+////                'Logout (' . Yii::$app->user->identity->username . ')',
+////                ['class' => 'btn btn-link logout']
+////            )
+////            . Html::endForm()
+////            . '</li>';
+////    }
+//    echo Nav::widget([
+//        'options' => ['class' => 'navbar-nav ml-auto'],
+//        'items' => $menuItems,
+//    ]);
+////    NavBar::end();
+//    ?>
 </header>
 
 <main role="main" class="flex-shrink-0">
@@ -75,11 +83,8 @@ AppAsset::register($this);
     </div>
 </main>
 
-<footer class="footer mt-auto py-3 text-muted">
-    <div class="container">
-        <p class="float-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="float-right"><?= Yii::powered() ?></p>
-    </div>
+<footer>
+
 </footer>
 
 <?php $this->endBody() ?>
