@@ -2,8 +2,8 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'Guitar Lavka';
+$this->title = 'Fabrics';
 ?>
-<div class="site-index">
-
+<div class="">
+123
 </div>

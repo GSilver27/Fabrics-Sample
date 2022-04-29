@@ -42,6 +42,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
+                'catalog' => 'site/catalog',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

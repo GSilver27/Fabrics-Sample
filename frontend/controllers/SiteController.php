@@ -244,6 +244,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionCatalog()
+    {
+        return $this->render('catalog');
+    }
+
 //    public function actionName()
 //    {
 //        return $this->render('name');

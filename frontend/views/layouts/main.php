@@ -1,6 +1,7 @@
- <?php
+<?php
 
 /** @var \yii\web\View $this */
+
 /** @var string $content */
 
 use common\widgets\Alert;
@@ -9,85 +10,91 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="h-100">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body class="d-flex flex-column h-100">
-<?php $this->beginBody() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>" class="h-100">
+    <head>
+        <meta charset="<?= Yii::$app->charset ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <?php $this->registerCsrfMetaTags() ?>
+        <title><?= Html::encode($this->title) ?></title>
+        <?php $this->head() ?>
+    </head>
+    <body class="">
+    <?php $this->beginBody() ?>
 
-<header>
-    <a href="../site/catalog.php">Catalog</a>
-    <a href="">Services</a>
-    <a href="">About</a>
-    <a href="">Delivery</a>
-    <a href="">Reviews</a>
-    <a href="">Education</a>
-    <a href="">Contacts</a>
-    <a href="">Wholesale</a>
-<!--    --><?php
-//    NavBar::begin([
-//////        'brandLabel' => Yii::$app->name,
-////        'brandUrl' => Yii::$app->homeUrl,
-////        'options' => [
-////            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
-////        ],
-////    ]);
-//    $menuItems = [
-//        ['label' => 'Catalog', 'url' => ['/site/catalog']],
-//        ['label' => 'Services', 'url' => ['/site/services']],
-//        ['label' => 'About', 'url' => ['/site/about']],
-//        ['label' => 'Delivery', 'url' => ['/site/delivery']],
-//        ['label' => 'Reviews', 'url' => ['/site/reviews']],
-//        ['label' => 'Education', 'url' => ['/site/education']],
-//        ['label' => 'Contacts', 'url' => ['/site/contacts']],
-//        ['label' => 'Wholesale', 'url' => ['/site/wholesale']],
-//    ];
-////    if (Yii::$app->user->isGuest) {
-////        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-////        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-////    } else {
-////        $menuItems[] = '<li>'
-////            . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-////            . Html::submitButton(
-////                'Logout (' . Yii::$app->user->identity->username . ')',
-////                ['class' => 'btn btn-link logout']
-////            )
-////            . Html::endForm()
-////            . '</li>';
-////    }
-//    echo Nav::widget([
-//        'options' => ['class' => 'navbar-nav ml-auto'],
-//        'items' => $menuItems,
-//    ]);
-////    NavBar::end();
-//    ?>
-</header>
+    <header>
+        <div class="wrapper">
+            <div class="header__outer">
+                <div class="header__inner">
+                    <div class="header__item header__main-text main-text-fz color-main">
+                        ТКАНИ
+                    </div>
 
-<main role="main" class="flex-shrink-0">
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+                    <div class="header__item">
+                        <div class="header__item-location">
+                            <img src="<?= Url::to(['imgs/location.svg']) ?>" alt="">Санкт-Петербург
+                        </div>
+                    </div>
+
+                    <div class="header__item">
+                        <div class="header__item-search">
+                            <input type="text" placeholder="Я ищу...">
+                        </div>
+                    </div>
+
+                    <div class="header__item">
+                        <div class="header__item-num-info">
+                            8 800 900 70 90
+                            <div class="header__work-time">
+                                Пн-вс: 10:00 - 21:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__item">
+                        <div class="header__icons">
+                            <div class="header__icons-favorites">
+                                <a href=""><img src="<?= Url::to(['imgs/favorites.svg']) ?>" alt=""></a>
+                            </div>
+                            <div class="header__icons-separator"></div>
+                            <div class="header__icons-account">
+                                <a href=""><img src="<?= Url::to(['imgs/account.svg']) ?>" alt=""></a>
+                            </div>
+                            <div class="header__icons-basket">
+                                <a href=""><img src="<?= Url::to(['imgs/basket.svg']) ?>" alt="">12</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav>
+                    <!--                <a href="--><?//= Url::to(['site/catalog']) ?><!--">Catalog</a>-->
+                    <div class="current-paige">Для одежды</div>
+                    <a href="">Для интерьера</a>
+                    <a href="">Мебельные</a>
+                    <a href="">Фурнитура</a>
+                    <a href="">Пряжа</a>
+                    <a href="">Новогодние</a>
+                    <a href="">Для шитья</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" class="">
         <?= $content ?>
-    </div>
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-</footer>
+    </footer>
 
-<?php $this->endBody() ?>
-</body>
-</html>
+    <?php $this->endBody() ?>
+    </body>
+    </html>
 <?php $this->endPage();
