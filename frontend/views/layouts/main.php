@@ -73,7 +73,6 @@ AppAsset::register($this);
                 </div>
 
                 <nav>
-                    <!--                <a href="--><?//= Url::to(['site/catalog']) ?><!--">Catalog</a>-->
                     <div class="current-paige">Для одежды</div>
                     <a href="">Для интерьера</a>
                     <a href="">Мебельные</a>
@@ -91,7 +90,6 @@ AppAsset::register($this);
     </main>
 
     <footer>
-
     </footer>
 
     <?php $this->endBody() ?>
