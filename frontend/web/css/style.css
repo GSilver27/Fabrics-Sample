@@ -30,7 +30,7 @@ body {
 
 :root {
     --main-black: #545155;
-    --main-purple: #BF1E77;
+    --main-purple: rgb(191, 30, 119);
     --main-white: #FFF;
     --secondary-white: #FBF7F4;
 }
@@ -57,6 +57,12 @@ h2 {
     font-weight: 600;
     line-height: 72px;
     text-transform: uppercase;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 }
 
 /* HEADER */
@@ -157,6 +163,10 @@ header a:hover {
     padding-right: 1rem;
 }
 
+.header__icons a:hover {
+    color: unset;
+}
+
 .current-paige {
     padding-bottom: 0.4rem;
     color: var(--main-purple);
@@ -174,9 +184,16 @@ nav {
 /* MAIN */
 /* BANNER */
 
+.main__banner {
+    position: relative;
+    top: 0;
+}
+
 .main__banner-outer {
+    position: absolute;
     width: 1770px;
     height: 595px;
+    background-repeat: no-repeat;
     background-image: url("/frontend/web/imgs/main-discount.png");
 }
 
@@ -255,7 +272,7 @@ nav {
 /* DISCOUNTS */
 
 .main__discounts {
-    margin-top: 10rem;
+    margin-top: 18rem;
 }
 
 .discounts__container {
@@ -309,31 +326,56 @@ nav {
 /* CAREGORIES */
 
 .main__categories {
+    position: relative;
     margin: 10rem auto 2rem;
 }
 
-.background__categories {
-    /*position: relative;*/
-    padding: 10rem 0 0;
+.categories__bg {
+    position: absolute;
+    right: 0;
+    width: 1770px;
+    height: 1000px;
+    z-index: -1;
+    border-radius: 20px;
     background: var(--secondary-white);
 }
 
-.categories__container {
+.categories__left-line {
+    position: absolute;
+    width: 1px;
+    height: 294px;
+    margin-top: -8%;
+    margin-left: 15%;
+    background: var(--main-purple);
+}
 
+.categories__right-line {
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 433px;
+    margin-top: -16%;
+    margin-right: 15%;
+    background: var(--main-purple);
 }
 
 .categories__text {
+    position: relative;
     text-align: center;
     margin-bottom: 4rem;
+    padding-top: 8rem;
 }
 
-.categories__text-bg {
-    position: relative;
-    font-size: 100px;
-    /*line-height: 252px;*/
-    color:black;
+.categories__text::after {
+    padding-top: 8rem;
+    content: "Категории";
+    position: absolute;
+    font-size: 168px;
+    left: 180px;
+    top: -110px;
+    color: var(--main-white);
     z-index: -1;
-    top: 0;
+    font-family: "MarckScript", serif;
 }
 
 .categories__cards {
@@ -406,8 +448,19 @@ nav {
 }
 
 .watched__text {
+    position: relative;
     text-align: center;
     margin-bottom: 4rem;
+}
+
+.watched__text::after {
+    content: "Ранее";
+    position: absolute;
+    font-size: 168px;
+    left: 380px;
+    top: -110px;
+    color: #BF1E771A;
+    font-family: "MarckScript", serif;
 }
 
 .watched__cards {
@@ -415,6 +468,7 @@ nav {
     justify-content: start;
     flex-wrap: wrap;
     gap: 30px;
+    /*margin-top: -25rem;*/
 }
 
 .watched__cards-1 {
@@ -468,6 +522,7 @@ nav {
 .card__buy {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .card__buy_price {
@@ -488,10 +543,183 @@ nav {
     color: var(--main-purple);
 }
 
+
 /* FOOTER */
 
 footer {
+    position: relative;
     margin-top: 10rem;
+    padding-bottom: 9rem;
+}
+
+.footer__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-right: 10%;
+    width: 1770px;
+    height: 692px;
+    z-index: -1;
+    border-radius: 20px;
+    background: var(--secondary-white);
+}
+
+.footer__side-line {
+    position: absolute;
+    width: 1px;
+    height: 575px;
+    margin-top: 4%;
+    margin-left: 15%;
+    background: var(--main-purple);
+}
+
+.footer__banner {
+    display: flex;
+    align-items: center;
+    padding: 7rem;
+    min-height: 297px;
+    border-radius: 10px;
+    color: var(--main-white);
+    background-image: url("/frontend/web/imgs/footer_banner.png");
+}
+
+.banner__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner__text-main {
+    font-size: 38px;
+    line-height: 57px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 35rem;
+}
+
+.banner__text-sub {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.banner__email {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.banner__email-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner__email-input {
+    width: 39rem;
+    border-radius: 4px;
+    padding: 14px 30px;
+    margin-right: 2rem;
+    font-weight: 600;
+    color: var(--main-purple);
+}
+
+.banner__email-input::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-purple);
+}
+
+.banner__email-btn {
+    border-radius: 4px;
+    padding: 14px 30px;
+    transition: 0.5s;
+    background: var(--main-black);
+}
+
+.banner__email-btn:hover {
+    background: #413f42;
+}
+
+.banner__email-btn svg {
+    padding-left: 0.5rem;
+}
+
+.banner__email-info {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 2rem;
+}
+
+.footer__columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 9rem;
+}
+
+.footer__divider {
+    width: 1px;
+    min-height: 100%;
+    margin-left: 20rem;
+    margin-right: 7rem;
+    background: #BF1E7733;
+}
+
+.footer_column-contacts,
+.footer_column-sections,
+.footer_column-payments {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_column-contacts,
+.footer_column-payments {
+    justify-content: space-between;
+}
+
+.column-contacts__info > div {
+    margin-top: 2rem;
+    line-height: 24px;
+}
+
+.column-contacts__socials {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.column-contacts__socials img:first-of-type {
+    margin-right: 2rem;
+}
+
+.footer_column-sections > div {
+    margin-top: 2rem;
+    line-height: 24px;
+}
+
+.column-payments__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-payments__info > a {
+    margin-top: 1.6rem;
+}
+
+.column-contacts__rights,
+.column-contacts__politics {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+@font-face {
+    font-family: "MarckScript";
+    src: url("../fonts/MarckScript-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
