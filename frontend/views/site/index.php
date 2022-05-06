@@ -26,17 +26,14 @@ $this->title = 'Fabrics';
 
                 <div class="banner__inner-buttons">
                     <div class="banner__inner-buttons_prev">
-                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.5 4.5L5.5 0.5M1.5 4.5L5.5 8.5M1.5 4.5H14" stroke="#FBF7F4"/>
                         </svg>
                     </div>
 
                     <div class="banner__inner-buttons_next">
-                        <svg width="64" height="9" viewBox="0 0 64 9" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M63.25 4.5L63.6036 4.14645L63.9571 4.5L63.6036 4.85355L63.25 4.5ZM62.8964 4.85355L58.8964 0.853553L59.6036 0.146447L63.6036 4.14645L62.8964 4.85355ZM63.6036 4.85355L59.6036 8.85355L58.8964 8.14645L62.8964 4.14645L63.6036 4.85355ZM63.25 5H0.75V4H63.25V5Z"
-                                  fill="#BF1E77"/>
+                        <svg width="64" height="9" viewBox="0 0 64 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63.25 4.5L63.6036 4.14645L63.9571 4.5L63.6036 4.85355L63.25 4.5ZM62.8964 4.85355L58.8964 0.853553L59.6036 0.146447L63.6036 4.14645L62.8964 4.85355ZM63.6036 4.85355L59.6036 8.85355L58.8964 8.14645L62.8964 4.14645L63.6036 4.85355ZM63.25 5H0.75V4H63.25V5Z" fill="#BF1E77"/>
                         </svg>
                     </div>
                 </div>
@@ -68,14 +65,13 @@ $this->title = 'Fabrics';
         <div class="categories__left-line"></div>
         <div class="categories__container wrapper">
             <div class="categories__text">
-                <h2>Популярные категории</h2>
+                <a href="<?= Url::to(['site/catalog']) ?>"><h2>Популярные категории</h2></a>
             </div>
 
             <div class="categories__cards">
                 <a href="">
                     <div class="categories__cards-1">Лен и полулен</div>
                 </a>
-
                 <a href="">
                     <div class="categories__cards-2">Хлопок</div>
                 </a>
@@ -112,9 +108,13 @@ $this->title = 'Fabrics';
             </div>
             <div class="watched__cards">
                 <div class="watched__card-1">
-                    <a href=""><img src="<?= Url::to(['imgs/watched-1.png']) ?>" alt=""></a>
+                    <div class="card__container-img-1">
+                        <a href="">
+                            <img class="fav-off" src="<?= Url::to(['imgs/fav-off.png']) ?>" alt="">
+                        </a>
+                    </div>
                     <p class="card__text">Рогожка</p>
-                    <h4 class="card__name">Альпийская деревенька</h4>
+                    <a href=""><h4 class="card__name">Альпийская деревенька</h4></a>
                     <p class="card__info-1"><span>Ширина</span>1.5 м</p>
                     <p class="card__info-2"><span>Состав</span>100%</p>
                     <p class="card__info-3"><span>Плотность</span>170 гр/м2</p>
@@ -126,9 +126,13 @@ $this->title = 'Fabrics';
                 </div>
 
                 <div class="watched__card-2">
-                    <img src="<?= Url::to(['imgs/watched-2.png']) ?>" alt="">
+                    <div class="card__container-img-2">
+                        <a href="">
+                            <img class="fav-on" src="<?= Url::to(['imgs/fav-on.png']) ?>" alt="">
+                        </a>
+                    </div>
                     <p class="card__text">Рогожка</p>
-                    <h4 class="card__name">Альпийская деревенька</h4>
+                    <a href=""><h4 class="card__name">Альпийская деревенька</h4></a>
                     <p class="card__info-1"><span>Ширина</span>1.5 м</p>
                     <p class="card__info-2"><span>Состав</span>100%</p>
                     <p class="card__info-3"><span>Плотность</span>170 гр/м2</p>
@@ -140,9 +144,13 @@ $this->title = 'Fabrics';
                 </div>
 
                 <div class="watched__card-3">
-                    <img src="<?= Url::to(['imgs/watched-3.png']) ?>" alt="">
+                    <div class="card__container-img-3">
+                        <a href="">
+                            <img class="fav-off" src="<?= Url::to(['imgs/fav-off.png']) ?>" alt="">
+                        </a>
+                    </div>
                     <p class="card__text">Рогожка</p>
-                    <h4 class="card__name">Альпийская деревенька</h4>
+                    <a href=""><h4 class="card__name">Альпийская деревенька</h4></a>
                     <p class="card__info-1"><span>Ширина</span>1.5 м</p>
                     <p class="card__info-2"><span>Состав</span>100%</p>
                     <p class="card__info-3"><span>Плотность</span>170 гр/м2</p>
@@ -154,5 +162,4 @@ $this->title = 'Fabrics';
                 </div>
             </div>
     </section>
-<!--    <a href="--><?//= Url::to(['site/catalog']) ?><!--">Catalog</a>-->
 </main>

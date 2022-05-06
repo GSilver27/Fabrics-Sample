@@ -59,6 +59,12 @@ h2 {
     text-transform: uppercase;
 }
 
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
 h5 {
     font-size: 16px;
     font-weight: 600;
@@ -224,8 +230,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
 .banner__inner-progress_nums {
     font-size: 48px;
     color: var(--main-purple);
@@ -276,9 +282,17 @@ nav {
 }
 
 .discounts__container {
-    display: flex;
     gap: 30px;
+    display: flex;
+    cursor: pointer;
     color: var(--main-white);
+}
+
+.discounts__card-1:hover,
+.discounts__card-2:hover,
+.discounts__card-3:hover {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
 }
 
 .discounts__card-1,
@@ -288,6 +302,7 @@ nav {
     height: 240px;
     border-radius: 10px;
     display: flex;
+    transition: 1s;
     align-items: center;
 }
 
@@ -336,7 +351,8 @@ nav {
     width: 1770px;
     height: 1000px;
     z-index: -1;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background: var(--secondary-white);
 }
 
@@ -346,6 +362,7 @@ nav {
     height: 294px;
     margin-top: -8%;
     margin-left: 15%;
+    z-index: -1;
     background: var(--main-purple);
 }
 
@@ -356,6 +373,7 @@ nav {
     height: 433px;
     margin-top: -16%;
     margin-right: 15%;
+    z-index: -1;
     background: var(--main-purple);
 }
 
@@ -364,6 +382,14 @@ nav {
     text-align: center;
     margin-bottom: 4rem;
     padding-top: 8rem;
+}
+.categories__text a h2 {
+    transition-duration: 0.5s;
+}
+
+.categories__text a h2:hover {
+    color: var(--main-purple);
+    transform: scale(1.2);
 }
 
 .categories__text::after {
@@ -450,7 +476,6 @@ nav {
 .watched__text {
     position: relative;
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .watched__text::after {
@@ -468,7 +493,8 @@ nav {
     justify-content: start;
     flex-wrap: wrap;
     gap: 30px;
-    /*margin-top: -25rem;*/
+    transition: 1s;
+    margin-top: 4rem;
 }
 
 .watched__cards-1 {
@@ -476,20 +502,45 @@ nav {
     flex-direction: column;
 }
 
-.watched__cards img {
+.card__container-img-1,
+.card__container-img-2,
+.card__container-img-3 {
+    position: relative;
     width: 360px;
     height: 360px;
     border-radius: 10px;
 }
 
+.card__container-img-1 {
+    background-image: url("/frontend/web/imgs/watched-1.png");
+}
+
+.card__container-img-2 {
+    background-image: url("/frontend/web/imgs/watched-2.png");
+}
+
+.card__container-img-3 {
+    background-image: url("/frontend/web/imgs/watched-3.png");
+}
+
+.fav-off, .fav-on {
+    position: absolute;
+    width: 22px;
+    height: 19px;
+    top: 30px;
+    right: 30px;
+}
+
 .card__text {
     font-size: 12px;
+    line-height: 18px;
     margin-top: 2.4rem;
     color: var(--main-purple);
 }
 
 .card__name {
     font-size: 24px;
+    line-height: 36px;
     font-weight: 600;
     margin-top: 0.5rem;
     color: var(--main-purple);
@@ -498,11 +549,14 @@ nav {
 .card__info-1 {
     font-weight: 300;
     margin-top: 2.4rem;
+    line-height: 24px;
+
 }
 
 .card__info-2, .card__info-3 {
     font-weight: 300;
     margin-top: 1.6rem;
+    line-height: 24px;
 }
 
 .card__info-1 span,
@@ -528,6 +582,7 @@ nav {
 .card__buy_price {
     font-size: 24px;
     font-weight: 600;
+    line-height: 36px;
     color: var(--main-black);
 }
 
@@ -536,13 +591,14 @@ nav {
     font-weight: 300;
     color: #5451557F;
     padding-left: 2rem;
+    line-height: 24px;
 }
 
 .card__buy_to-basket {
     font-size: 16px;
+    line-height: 24px;
     color: var(--main-purple);
 }
-
 
 /* FOOTER */
 
@@ -560,7 +616,7 @@ footer {
     width: 1770px;
     height: 692px;
     z-index: -1;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
     background: var(--secondary-white);
 }
 
@@ -570,6 +626,7 @@ footer {
     height: 575px;
     margin-top: 4%;
     margin-left: 15%;
+    z-index: -1;
     background: var(--main-purple);
 }
 
@@ -694,7 +751,7 @@ footer {
     margin-right: 2rem;
 }
 
-.footer_column-sections > div {
+.footer_column-sections > a {
     margin-top: 2rem;
     line-height: 24px;
 }
@@ -713,7 +770,6 @@ footer {
     font-size: 12px;
     line-height: 18px;
 }
-
 
 @font-face {
     font-family: "MarckScript";

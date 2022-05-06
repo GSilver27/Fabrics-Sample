@@ -1,0 +1,263 @@
+/* SECOND PAGE */
+
+/* BREADCRUMBS */
+
+.shadow {
+    box-shadow: 0 10px 20px -5px #00000026 !important;
+    z-index: 1;
+}
+
+.breadcrumbs {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.breadcrumbs-bg {
+    position: absolute;
+    width: 1770px;
+    height: 50px;
+    z-index: -1;
+    border-bottom-right-radius: 20px;
+    background: var(--secondary-white);
+}
+
+.breadcrumbs-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.breadcrumbs img {
+    margin-right: 2rem;
+}
+
+.breadcrumbs__b-slash {
+    color: #54515533;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.breadcrumbs__last {
+    color: #5451554C;
+}
+
+/* CATALOG */
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog__sidebar {
+
+}
+
+.catalog__types h2 {
+    text-transform: uppercase;
+}
+
+.selection__cards {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--main-white);
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.selection__cards a:hover {
+    color: var(--main-white);
+}
+
+.selection__materials-1,
+.selection__materials-2,
+.selection__materials-3,
+.selection__materials-4,
+.selection__materials-5,
+.selection__materials-6,
+.selection__materials-7 {
+    width: 220px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 18px 30px;
+}
+
+.selection__materials-1 {
+    background: url("/frontend/web/imgs/catalog-1.png");
+}
+
+.selection__materials-2 {
+    background: url("/frontend/web/imgs/catalog-2.png");
+}
+
+.selection__materials-3 {
+    background: url("/frontend/web/imgs/catalog-3.png");
+}
+
+.selection__materials-4 {
+    background: url("/frontend/web/imgs/catalog-4.png");
+}
+
+.selection__materials-5 {
+    background: url("/frontend/web/imgs/catalog-5.png");
+}
+
+.selection__materials-6 {
+    background: url("/frontend/web/imgs/catalog-6.png");
+}
+
+.selection__materials-7 {
+    background: url("/frontend/web/imgs/catalog-7.png");
+}
+
+/* FILTERS */
+
+.catalog__filters {
+
+}
+.catalog__filters h4 {
+    margin-top: 3.5rem;
+}
+
+.catalog__divider {
+    width: 240px;
+    height: 2px;
+    background: #BF1E7719;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* TYPE */
+
+
+
+/* CATALOG */
+
+.catalog__products {
+
+}
+
+.catalog__sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4rem;
+    padding-top: 2.5rem;
+}
+
+.catalog__sort-newest svg,
+.catalog__sort_price svg {
+    line-height: 24px;
+    margin-left: 0.7rem;
+}
+
+.catalog__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 1s;
+    margin-top: 4.5rem;
+}
+
+.catalog__cards {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+    transition: 1s;
+}
+
+.catalog__card-1,
+.catalog__card-2,
+.catalog__card-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__card_container-img-1,
+.catalog__card_container-img-2,
+.catalog__card_container-img-3 {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+}
+
+.catalog__card_container-img-1 {
+    background-image: url("/frontend/web/imgs/watched-1.png");
+}
+
+.catalog__card_container-img-2 {
+    background-image: url("/frontend/web/imgs/watched-2.png");
+}
+
+.catalog__card_container-img-3 {
+    background-image: url("/frontend/web/imgs/watched-3.png");
+}
+
+
+.catalog__card_text {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 2.4rem;
+    color: var(--main-purple);
+}
+
+.catalog__card_name {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--main-purple);
+}
+
+.catalog__card_info-1 {
+    font-weight: 300;
+    margin-top: 2.4rem;
+}
+
+.catalog__card_info-2,
+.catalog__card_info-3 {
+    font-weight: 300;
+    margin-top: 1.6rem;
+}
+
+.catalog__card_info-1 span,
+.catalog__card_info-2 span,
+.catalog__card_info-3 span {
+    font-weight: 600;
+    padding-right: 1rem;
+}
+
+.catalog__card_divider {
+    width: 100%;
+    height: 1px;
+    margin: 2.4rem 0;
+    background: var(--main-purple);
+}
+
+.catalog__card_buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog__card_buy-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--main-black);
+}
+
+.catalog__card_buy-price span {
+    font-size: 16px;
+    font-weight: 300;
+    color: #5451557F;
+    padding-left: 2rem;
+}
+
+.catalog__card_buy-to-basket {
+    font-size: 16px;
+    color: var(--main-purple);
+}

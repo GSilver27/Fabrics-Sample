@@ -27,7 +27,7 @@ AppAsset::register($this);
     <body class="">
     <?php $this->beginBody() ?>
 
-    <header>
+    <header class="shadow">
         <div class="wrapper">
             <div class="header__outer">
                 <div class="header__inner">
@@ -144,13 +144,13 @@ AppAsset::register($this);
 
                 <div class="footer_column-sections">
                     <h5>Разделы</h5>
-                    <div>Для одежды</div>
-                    <div>Для интерьера</div>
-                    <div>Мебельные</div>
-                    <div>Фурнитура</div>
-                    <div>Пряжа</div>
-                    <div>Новогодние</div>
-                    <div>Для шитья</div>
+                    <a href="<?= Url::to(['/']) ?>">Для одежды</a>
+                    <a href="">Для интерьера</a>
+                    <a href="">Мебельные</a>
+                    <a href="">Фурнитура</a>
+                    <a href="">Пряжа</a>
+                    <a href="">Новогодние</a>
+                    <a href="">Для шитья</a>
                 </div>
 
                 <div class="footer__divider"></div>
