@@ -2,11 +2,12 @@
 
 html, body, div, span, p, a, a:hover, img,
 h1, h2, h3, h4, h5, h6, footer, header,
-section, button, input {
+section, button, input, select, option {
     margin: 0;
     padding: 0;
     border: 0;
     color: inherit;
+    background: none;
     text-decoration: none;
 }
 
@@ -30,7 +31,7 @@ body {
 
 :root {
     --main-black: #545155;
-    --main-purple: rgb(191, 30, 119);
+    --main-purple: #BF1E77FF;
     --main-white: #FFF;
     --secondary-white: #FBF7F4;
 }

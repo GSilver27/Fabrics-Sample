@@ -53,7 +53,7 @@
 
 }
 
-.catalog__types h2 {
+.catalog__selection h2 {
     text-transform: uppercase;
 }
 
@@ -117,6 +117,7 @@
 .catalog__filters {
 
 }
+
 .catalog__filters h4 {
     margin-top: 3.5rem;
 }
@@ -129,8 +130,52 @@
     margin-bottom: 2rem;
 }
 
+
 /* TYPE */
 
+.catalog__types,
+.catalog__picture,
+.catalog__appointment,
+.catalog__color,
+.catalog__feature,
+.catalog__compound,
+.catalog__manufacture {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+ul li {
+    list-style: none;
+}
+
+.catalog__filters_btns {
+
+}
+
+.catalog__picture {
+
+}
+
+.btn-apply,
+.btn-reset {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-apply {
+    margin-top: 4rem;
+    color: var(--main-white);
+    background: var(--main-purple);
+}
+
+.btn-reset {
+    margin-top: 1rem;
+    color: var(--main-purple);
+    background: var(--secondary-white);
+}
 
 
 /* CATALOG */
@@ -145,6 +190,10 @@
     justify-content: flex-end;
     gap: 4rem;
     padding-top: 2.5rem;
+}
+
+.catalog__sort a:hover {
+    font-weight: bold;
 }
 
 .catalog__sort-newest svg,
@@ -260,4 +309,72 @@
 .catalog__card_buy-to-basket {
     font-size: 16px;
     color: var(--main-purple);
+}
+
+/* PAGINATION */
+
+.catalog__pagination {
+    display: flex;
+    margin-top: 7rem;
+    margin-left: 3rem;
+    justify-content: space-between;
+}
+
+.pagination__container {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pagination__prev,
+.pagination__next,
+.pagination__page,
+.pagination__page-current {
+    cursor: pointer;
+    padding: 13px 20px;
+    border-radius: 4px;
+    background: var(--secondary-white);
+}
+
+.pagination__page:hover {
+    color: var(--main-purple);
+    font-weight: 600;
+}
+.pagination__prev:hover path,
+.pagination__next:hover path {
+    fill: var(--main-purple);
+}
+
+.pagination__page-current {
+    color: var(--main-white);
+    background: var(--main-purple);
+}
+
+.pagination__option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pagination__option-text {
+
+}
+
+.pagination__option-amount {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 4px;
+    margin-left: 3rem;
+    background: var(--secondary-white);
+}
+
+.pagination__option-amount select,
+.pagination__option-amount select option {
+    color: var(--main-purple);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: -2rem;
 }
